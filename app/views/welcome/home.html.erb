@@ -1,0 +1,33 @@
+<%# Landing page %>
+
+<div class="row">
+  <% @title = "Inspire | Home" %>
+
+  <%# Flash message for errors %>
+  <% if flash[:alert] != nil %>
+    <div class="justify-content-center alert alert-dark" role="alert">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
+</div>
+
+<%# Welcome Message %>
+<section class="jumbotron text-center">
+  <div class="col">
+    <h1>Welcome to Inspire!</h1>
+    <h2>Where will you find your next inspiration?</h2>
+  </div>
+</section>
+
+<%# Projects Index %>
+<section class="row justify-content-center project-index">
+  <% @projects.each do |project| %>
+    <div class="col-3">
+      <div class="card text-center">
+        <h1 class="card-title"><%= project.title %></h1>
+        <p class="card-text">Created by: <%= link_to project.user.name, user_path(project.user) %></p>
+        <a class="btn" href="#" role="button">View Project</a>
+      </div>
+    </div>
+  <% end %>
+</section>

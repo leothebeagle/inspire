@@ -52,6 +52,7 @@ Building controllers for:
 Users
 Projects
 Sections
+Sessions controller
 
 
 Meg, Guy, Terry, Yonnick
@@ -70,6 +71,10 @@ View for
   - Show
   - New
 
+Next Sprint
+Create Trello (or Airtable)
+Finish Views
+Finish Controllers
 
 
 
